@@ -32,9 +32,7 @@ public class TransactionService {
     }
 
     public Transaction save(Transaction transaction) {
-        transaction.setId(UUID.randomUUID());
         transaction.setCreatedAt(Instant.now());
-
         return transactionRepository.save(transaction);
     }
 }
